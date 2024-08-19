@@ -1,0 +1,48 @@
+.nav-bar {
+    font-size: 14px;
+    display: grid;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    /* grid-column: 1 / 14; */
+    grid-template-columns: repeat(12, 1fr);
+    box-shadow: 0px .5px .5px;
+    position: absolute;
+    /* align-self: center; */
+    justify-self: top;
+    top: 0;
+    width: 100%;
+}
+
+.nav-text {
+    font-size: 14px;
+    justify-self: center;
+    align-self: center;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.nav-add {
+    grid-column: 4 / 4;
+}
+
+.nav-connect {
+    grid-column: 5 / 5;
+}
+
+.nav-apply {
+    grid-column: 6 / 6;
+}
+
+.nav-reconnect {
+    grid-column: 7 / 7;
+}
+
+.nav-update {
+    grid-column: 8 / 8;
+}
+
+.nav-view-all {
+    grid-column: 9 / 9;
+}

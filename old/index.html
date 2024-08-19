@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Stone Interned</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="nav/add/add.css">
+    <link rel="stylesheet" href="nav/connect/connect.css">
+    <link rel="stylesheet" href="nav/apply/apply.css">
+    <link rel="stylesheet" href="nav/reconnect/reconnect.css">
+    <link rel="stylesheet" href="nav/update/update.css">
+    <link rel="stylesheet" href="nav/viewall/viewall.css">
+</head>
+<body>
+    <div id = "nav-bar" class="nav-bar">
+        <h1 id = "nav-add" class="nav-add nav-text">Add</h1>
+        <h1 id = "nav-connect" class="nav-connect nav-text">Connect</h1>
+        <h1 id = "nav-apply" class="nav-apply nav-text">Apply</h1>
+        <h1 id = "nav-reconnect" class="nav-reconnect nav-text">Re-connect</h1>
+        <h1 id = "nav-update" class="nav-update nav-text">Update</h1>
+        <h1 id = "nav-view-all" class="nav-view-all nav-text">View All</h1>
+    </div>
+    <div class="add-container" id="add-container">
+        <div class="internship-card" id="internship-card">
+            <h2>Add an Internship Opportunity</h2>
+            <form id="internship-form">
+                <label for="company">Company Name:</label>
+                <input type="text" id="company" name="company" required>
+
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" required>
+
+                <label for="due-date">Due Date:</label>
+                <input type="date" id="due-date" name="due-date" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location">
+
+                <!-- <label for="description">Description (optional):</label>
+                <textarea id="description" name="description" rows="2"></textarea> -->
+
+                <!-- <label for="requirements">Requirements (optional):</label>
+                <textarea id="requirements" name="requirements" rows="2"></textarea> -->
+
+                <label for="application-status">Application Status:</label>
+                <select id="application-status" name="application-status">
+                    <option value="Not Applied">Not Applied</option>
+                    <option value="Applied">Applied</option>
+                    <option value="Interviewing">Interviewing</option>
+                    <option value="Offer Received">Offer Received</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+
+                <label for="priority">Priority (1-5)</label>
+                <select id="priority" name="priority">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <button type="submit">Add Internship</button>
+            </form>
+        </div>
+    </div>
+    <div class="connect-container" id="connect-container">
+        <div class="linkedin-container" id="linkedin-container">
+            <div id="linkedin-recruiter-card" class="linkedin-recruiter-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus recusandae maxime facilis ea. Odit voluptatem tempore at qui voluptatum iusto dolores amet aliquid minima expedita? Aut dignissimos molestias ipsam sequi.</div>
+            <div id="linkedin-alumni-card" class="linkedin-alumni-card"></div>
+            <!-- <div id="linkedin-recruiter-card" class="linkedin-recruiter-card"></div> -->
+        </div>
+        <div class="top-display" id="top-display">
+            <div id="top-display-company" class="top-display-company"></div>
+            <div id="top-display-position" class="top-display-position"></div>
+            <!-- <div class="top-display-description"></div> -->
+            <div id="top-display-dueDate" class="top-display-dueDate"></div>
+            <div id="top-display-priority" class="top-display-priority"></div>
+        </div>
+        <div class="additional-container" id="additional-container">
+            <div id="job-keywords" class="job-keywords">Job keywords here</div>
+        </div>
+    </div>
+    <div class="apply-container" id="apply-container">
+        <div class="apply-card" id="apply-card">
+            Apply!
+        </div>
+        <div class="link-card" id="link-card">
+            <div class="apply-link" id="apply-link">Apply Link Here</div>
+            <div class="resume-link" id="resume-link">Resume Link Here</div>
+            <div class="cover-letter-link" id="cover-letter-link">CV Link Here</div>
+        </div>
+        <div class="keywords-card" id="keywords-card">
+            Keywords!
+        </div>
+    </div>
+    <div class="reconnect-container" id="reconnect-container">
+        <div class="reconnect-card" id="reconnect-card">
+            Reconnect!
+        </div>
+    </div>
+    <script type="module" src="shared.js"></script>
+</body>
+</html>

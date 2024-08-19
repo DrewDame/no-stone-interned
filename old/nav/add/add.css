@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+    padding: 1rem 2rem;
+    top: 0;
+    left: 0;
+    right: 0; */
+/* } */
+
+.add-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.internship-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.internship-card h2 {
+    margin-top: 0;
+}
+
+.internship-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.internship-card label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.internship-card input,
+.internship-card select,
+.internship-card textarea,
+.internship-card button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.internship-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.internship-card button:hover {
+    background-color: #0056b3;
+}
