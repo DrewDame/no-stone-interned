@@ -307,3 +307,54 @@ body {
     width: 20rem;
     height: 20rem;
 }
+
+.reconnect-container {
+    display: none;
+    /* grid-template-columns: 2fr 1fr; */
+    justify-self: center;
+    gap: 2rem;
+}
+
+.reconnect-form {
+    grid-column: 1 / 2;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.1rem;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#reconnect-internship-card {
+    grid-column: 2 / 3;
+}
+
+.reconnect-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.reconnect-recruiter-message-div {
+    grid-column: 1 / 2;
+}
+
+.reconnect-alumni-message-div { 
+    grid-column: 2 / 3;
+}
+
+.reconnect-recruiter-button {
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #1768ac;
+    border-radius: 2.4rem;
+    padding: 0.5rem;
+}
+
+.reconnect-alumni-button {
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #1768ac;
+    border-radius: 2.4rem;
+    padding: 0.5rem;
+}
