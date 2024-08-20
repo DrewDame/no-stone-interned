@@ -204,7 +204,7 @@ body {
     border-width: 0.1rem;
     border-color: #a188a6;
     border-radius: 1rem;
-    min-height: 40rem;
+    min-height: 35rem;
 }
 
 .connect-update-button {
@@ -217,4 +217,93 @@ body {
     margin-top: 1rem;
     width: 10rem;
     text-align: center;
+}
+
+.apply-container {
+    display: none;
+    grid-template-columns: 1fr 2fr;
+    justify-self: center;
+    gap: 5rem;
+    padding: 5rem;
+    align-items: start;
+}
+
+#apply-internship-card {
+    grid-row: 1 / 2;
+}
+
+.apply-job-requirements {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border-style: solid;
+    border-radius: 1rem;
+    border-color: black;
+    border-width: 0.1rem;
+}
+
+.final-steps-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    justify-content: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+}
+
+.final-steps-text {
+    display: grid;
+    justify-self: center;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.final-steps-top-text {
+    grid-row: 1 / 2;
+    justify-self: center;
+    align-self: end;
+}
+
+.final-steps-bottom-text {
+    grid-row: 2 / 3;
+    justify-self: center;
+}
+
+.final-steps-card-container {
+    display: grid;
+    gap: 2rem;
+}
+
+.final-steps-top-cards {
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    gap: 2rem;
+}
+
+#final-steps-card-01 {
+    grid-column: 1 / 2;
+}
+
+#final-steps-card-02 {
+    grid-column: 2 / 3;
+}
+
+.final-steps-bottom-cards {
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    gap: 2rem;
+}
+
+.final-steps-card {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-radius: 1rem;
+    width: 20rem;
+    height: 20rem;
 }
