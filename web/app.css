@@ -358,3 +358,7 @@ body {
     border-radius: 2.4rem;
     padding: 0.5rem;
 }
+
+#priority-slider {
+    width: 300px;
+}

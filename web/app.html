@@ -51,6 +51,17 @@
                 <label for="link" id="link-label">Link</label><br>
                 <input type="text" name="link" id="link-field">
             </div>
+            <div class="priority-div" id="priority-div">
+                <input id="priority-slider" type="range" min="1" value="1" max="5" step="1" list="ticks">
+                <datalist id="ticks">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </datalist>
+                <output id="rangevalue">1</output>
+            </div>
         </div>
         <div class="add-form-button" id="add-form-button">
             <h2>Add</h2>
