@@ -34,6 +34,7 @@ document.getElementById('reconnect-button').addEventListener('click', function(e
     document.getElementById('apply-container').style.display = 'none';
     document.getElementById('reconnect-container').style.display = 'grid';
     document.getElementById('update-container').style.display = 'none';
+    displayReconnectCard();
 });
 
 document.getElementById('update-button').addEventListener('click', function(event) {
@@ -153,6 +154,19 @@ function displayAddCard() {
     })
 }
 
+function displayReconnectCard() {
+    let internships = getInternships(Stage.RECONNECT);
+    let ship = internships[0];
+    document.getElementById('reconnect-internship-company').textContent = ship.company;
+    document.getElementById('reconnect-internship-position').textContent = ship.position;
+    document.getElementById('reconnect-internship-deadline').textContent = ship.deadline;
+    document.getElementById('reconnect-internship-location').textContent = ship.location;
+    document.getElementById('reconnect-internship-card').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.open(ship.link, "_blank");
+    })
+}
+
 document.querySelector("#priority-slider").addEventListener("change", function() {
     let closest = getClosest([1,2,3,4,5], this.value);
     this.value = document.querySelector("#rangevalue").value = closest;
@@ -218,4 +232,14 @@ document.getElementById('final-steps-card-03').addEventListener('click', functio
     ship.stage = Stage.RECONNECT;
     saveInternships(internships);
     console.log(getInternships());
+})
+
+document.getElementById('reconnect-recruiter-message-div').addEventListener('click', function(event) {
+    event.preventDefault();
+    navigator.clipboard.writeText("copied recruiter message to clipboard");
+})
+
+document.getElementById('reconnect-alumni-message-div').addEventListener('click', function(event) {
+    event.preventDefault();
+    navigator.clipboard.writeText("copied alumni message to clipboard");
 })
