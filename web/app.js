@@ -70,7 +70,7 @@ function getInternships(targetStage) {
         const internshipsJSON = localStorage.getItem('internships');
         const internshipsArray = internshipsJSON ? JSON.parse(internshipsJSON) : [];
         return internshipsArray.map(internshipObj => new Internship(internshipObj.company, internshipObj.position, internshipObj.deadline,
-            internshipObj.location, internshipObj.priority, internshipObj.link));
+            internshipObj.location, internshipObj.priority, internshipObj.link, internshipObj.requirements, internshipObj.stage));
     }
     else {
         let internships = getInternships();
@@ -180,5 +180,6 @@ document.getElementById('connect-update-button').addEventListener('click', funct
     ship.requirements = document.getElementById('copy-field-input').value;
     document.getElementById('copy-field-input').value = '';
     ship.stage = Stage.APPLY;
+    console.log(internships);
     saveInternships(internships);
 })
