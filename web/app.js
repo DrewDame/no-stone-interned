@@ -24,6 +24,7 @@ document.getElementById('apply-button').addEventListener('click', function(event
     document.getElementById('apply-container').style.display = 'grid';
     document.getElementById('reconnect-container').style.display = 'none';
     document.getElementById('update-container').style.display = 'none';
+    displayAddCard();
 });
 
 document.getElementById('reconnect-button').addEventListener('click', function(event) {
@@ -139,6 +140,19 @@ function displayConnectCard() {
     });
 }
 
+function displayAddCard() {
+    let internships = getInternships(Stage.APPLY);
+    let ship = internships[0];
+    document.getElementById('apply-internship-company').textContent = ship.company;
+    document.getElementById('apply-internship-position').textContent = ship.position;
+    document.getElementById('apply-internship-deadline').textContent = ship.deadline;
+    document.getElementById('apply-internship-location').textContent = ship.location;
+    document.getElementById('apply-internship-card').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.open(ship.link, "_blank");
+    })
+}
+
 document.querySelector("#priority-slider").addEventListener("change", function() {
     let closest = getClosest([1,2,3,4,5], this.value);
     this.value = document.querySelector("#rangevalue").value = closest;
@@ -180,6 +194,28 @@ document.getElementById('connect-update-button').addEventListener('click', funct
     ship.requirements = document.getElementById('copy-field-input').value;
     document.getElementById('copy-field-input').value = '';
     ship.stage = Stage.APPLY;
-    console.log(internships);
     saveInternships(internships);
+})
+
+//TODO: Parse through the job requirements string to make the job requirements box
+//on the apply page dynamic
+
+document.getElementById('final-steps-card-01').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.open("https://overleaf.com/", "_blank");
+})
+
+document.getElementById('final-steps-card-02').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.open("https://drive.google.com/", "_blank");
+})
+
+document.getElementById('final-steps-card-03').addEventListener('click', function(event) {
+    event.preventDefault();
+    let internships = getInternships(Stage.APPLY);
+    let ship = internships[0];
+    window.open(ship.link, "_blank");
+    ship.stage = Stage.RECONNECT;
+    saveInternships(internships);
+    console.log(getInternships());
 })
