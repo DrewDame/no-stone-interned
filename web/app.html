@@ -52,7 +52,8 @@
                 <input type="text" name="link" id="link-field">
             </div>
             <div class="priority-div" id="priority-div">
-                <input id="priority-slider" type="range" min="1" value="1" max="5" step="1" list="ticks">
+                <h3>Priority</h3>
+                <input id="priority-slider" type="range" min="1" value="3" max="5" step="1" list="ticks">
                 <datalist id="ticks">
                     <option>1</option>
                     <option>2</option>
@@ -60,7 +61,7 @@
                     <option>4</option>
                     <option>5</option>
                 </datalist>
-                <output id="rangevalue">1</output>
+                <output id="rangevalue">3</output>
             </div>
         </div>
         <div class="add-form-button" id="add-form-button">
@@ -114,8 +115,17 @@
                     <h2>Copy and Paste Job Requirements</h2>
                 </div>
                 <div id="copy-field" class="copy-field">
-                    <h2>Copy and paste the job requirements here</h2>
+                    <textarea id="copy-field-input"
+                    placeholder="Enter job requirements here...">
+                    </textarea>
                 </div>
+
+                <!-- <div id="apply-job-requirements" class="apply-job-requirements">
+                    <div id="job-requirements-content" class="job-requirements-content">
+                        <textarea id="job-requirements-input" rows="10" cols="50" placeholder="Enter job requirements here..."></textarea>
+                    </div>
+                </div> -->
+                
             </div>
             <div id="connect-update-button" class="connect-update-button">
                 <h2>Update</h2>
